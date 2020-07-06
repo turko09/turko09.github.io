@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/index.css" />
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsen-css-components.min.css">
+
+    <link rel="stylesheet" href="pages/assets/css/reset.css">
+    <link rel="stylesheet" href="pages/assets/css/style.css">
+
+    <title>Team ALPHA</title>
+</head>
+
+
+
+
+<body>
+    <div id="deviceready">
+        <ons-page>
+            <div style="text-align: center;">
+                <p>
+                    <h3>
+                        <strong>Registration Form</strong>
+                    </h3>
+                    <form>
+
+                        <input id="fname" class="input-txt" type="text" placeholder="First Name" value="" required>
+                        <p id="fnerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="lname" class="input-txt" type="text" placeholder="Last Name" value="" required>
+                    <p id="lnerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="email" class="input-txt" type="email" placeholder="Email Address" value="" required>
+                    <p id="emailerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="password" class="input-txt" type="password" placeholder="Password" value="" required>
+                    <p id="pwerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="cpassword" class="input-txt" type="password" placeholder="Confirm Password" value="" required>
+                    <p id="cpwerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="mobile" class="input-txt" type="number" placeholder="Mobile Number" value="" required>
+                    <p id="merror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+                <p>
+                    <input id="emobile" class="input-txt" type="number" placeholder="Emergency Contact" value="" required>
+                    <p id="emerror" style="display: none; color: #fff; font-weight: bold;"></p>
+                </p>
+
+                <input type="button" class="btn4 btn--right" onclick="register.register()" value="Register">
+
+                <input type="button" class="btn4 btn--right" onclick="location.href = 'login.html';" value="Cancel">
+
+                </form>
+            </div>
+        </ons-page>
+    </div>
+
+    <script src="pages/assets/lib/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="pages/assets/lib/jquery/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="pages/js/config.js"></script>
+    <script type="text/javascript" src="pages/js/register.js"></script>
+    <script type="text/javascript" src="pages/js/map.js"></script>
+
+    <script async defer content="script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOnTzBRmXJM7XzmWAbE8jMWwRzAu9tEC8&callback=map.initMap">
+    </script>
+</body>
+
+</html>

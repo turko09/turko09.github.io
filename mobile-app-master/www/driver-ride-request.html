@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/index.css" />
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsen-css-components.min.css">
+
+    <link rel="stylesheet" href="pages/assets/css/reset.css">
+    <link rel="stylesheet" href="pages/assets/css/style.css">
+
+    <title>Team ALPHA</title>
+</head>
+
+<body>
+    <ons-page>
+        <ons-card>
+            <div class="login-heading" align="center">
+                <div id="headerId" class="thicker" align="center"></div>
+                <hr color="black" size="1">
+                <div class="thick">
+                    <label class="label" id="originId"></label>
+                    <br> 
+                </div>
+
+                <div class="thick"></strong>
+                    <label class="label" id="destId"></label>
+                    <br>
+                </div>
+
+                <div class="thick"></strong>
+                    <label class="label" id="costId"></label>
+                    <br>
+                </div>
+
+                <hr color="black" size="1">
+       
+                <input type="button" id="start" class="btn4 btn--right" onclick="driverride.startTrip()" value="Start Trip">
+                <input type="button" id="end" class="btn4 btn--right" onclick="driverride.endTrip()" value="End Trip">
+                <input type="button" id="logout" class="btn4 btn--right" onclick="driverride.logout()" value="Logout">
+            </div>
+        </ons-card>
+        <div id="map"></div>
+    </ons-page>
+
+    <script src="pages/assets/lib/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="pages/assets/lib/jquery/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="pages/js/config.js"></script>
+    <script type="text/javascript" src="pages/js/map.js"></script>
+<!--     <script type="text/javascript" src="pages/js/loglocation.js"></script> -->
+    <script type="text/javascript" src="pages/js/driver-ride-request.js"></script>
+    <script type="text/javascript" src="pages/js/onesignal.js"></script>
+    <script async defer content="script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOnTzBRmXJM7XzmWAbE8jMWwRzAu9tEC8&libraries=places&callback=map.initMap">
+    </script>
+
+    <script type="text/javascript">
+        driverride.initialize();
+        onesignal.initialize();
+    </script>
+</body>
+
+</html>

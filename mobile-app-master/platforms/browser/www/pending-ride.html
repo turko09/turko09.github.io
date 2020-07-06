@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/index.css" />
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="pages/assets/lib/onsenui/css/onsen-css-components.min.css">
+
+    <link rel="stylesheet" href="pages/assets/css/reset.css">
+    <link rel="stylesheet" href="pages/assets/css/style.css">
+
+    <title>Team ALPHA</title>
+</head>
+
+<body>
+
+    <ons-page>
+        <ons-card>
+            <div class="login-heading">
+                <div class="thicker" align="center">Your ride is on the way.</div>
+                <hr color="green" size="1">
+                <div class="thick">Model:
+                    <label class="label" id="driverId"></label>
+                    <br> </div>
+
+                <div class="thick">Color:</strong>
+                    <label class="label" id="vehicleId"></label>
+                    <br>
+                </div>
+                <div class="thick">Plate Number:</strong>
+                    <label class="label" id="plateId"></label>
+                    <br>
+                </div>
+                <hr color="green" size="1">
+                <button class="btn4 btn--right" style="visibility: collapse;" onclick="onesignal.passengerTripStarted()">Start Trip</button>
+                <button class="btn1 btn--right" style="visibility: collapse;" onclick="pendingride.cancel()">Cancel</button>
+
+
+
+            </div>
+        </ons-card>
+        <div id="map"></div>
+    </ons-page>
+
+    <script src="pages/assets/lib/onsenui/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="pages/assets/lib/jquery/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="pages/js/config.js"></script>
+    <script type="text/javascript" src="pages/js/map.js"></script>
+    <script type="text/javascript" src="pages/js/pending-ride.js"></script>
+    <script type="text/javascript" src="pages/js/onesignal.js"></script>
+
+    <script async defer content="script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOnTzBRmXJM7XzmWAbE8jMWwRzAu9tEC8&callback=map.initMap">
+    </script>
+
+    <script type="text/javascript">
+        pendingride.initialize();
+        onesignal.initialize();
+    </script>
+</body>
+
+</html>

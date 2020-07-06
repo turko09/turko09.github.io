@@ -1,0 +1,46 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "agd.team-alpha-mobile"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+stages:
+  - name: after_success
+    if: branch = master
+
+language: php
+
+php:
+  - 7.0
+
+install:
+  - composer install
+
+script: skip
+
+after_success:
+  #- "find vendor -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://files.000webhost.com/public_html/{} \\;"
+  - "find api -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USER:$FTP_PASSWORD ftp://files.000webhost.com/public_html/{} \\;"
+
+env:
+  global:
+    - secure: aCasnrTpxngAvw0YJL8TthfCR+sWW00hVgGHGls+QzXEnJxsIWiH9i+mHWp6vYNbJK7Csr1TD9GFbE/L51EGB9GmExR4Wf4JK3TiC8i6S/hIki3JCpCZaiDKArknFvF5MtWtJUOGpB+IixxX24QQKrK6YQ54RhoEazJUItlk0t+3P80EcMDkn+lLaXQwoeSJI36Z+jsWTEL5pZ8OMS3+sas855oKn3YuClvSQQnclMZMSoQcpEd1lP/xMcXjh8ryh3kymNJyg5Qts+WJdarazc2clRYCczESFP/6SX0kQOWI8rsK1NxtkpqvtP/KN7PofT9IKoPnAZsqzOrgvjEXnw0vzNYCxT/HD4s4NmaWOClslev9OCKxP0fdXXi29eIpLxNr5U+yeaxuGXlizsP1BcQRAhE3MBJ4E45iFZJOJi0+pgXjsUItgLh6iaukSBjA/+G8ACGe15b06NwBuZdV2RJnDv8aHZ+kgQlAvZao67PbS59AyvDr8JPsVSQ3O6ZneSWJh5y8flH70H6anbRnuUz+HRP9ANgHWTNw7pMBy3RjGCETgE/UEd++LbANAzEKB9i60ieRLeIekOeS4Oh2XGe3kgYgbMiRPjRaenJTKshvqnDCgjghfpVFjHkS5zMmDQYQK85ZUkezkMMjrbr22alaJJgK+17xaiH05eJKMrs=
+    - secure: MLCKh/mh8gdIfMnFrNBabRImBQw2Ng4NvbUIpS/frbl+hXtacpC6NJBKHtb+uDijRhmyNtGwcdKeUbGWyCcCJxP2foXOl3hhbgWQlKoxZtDwTBRAMCKUwd7w2uWofT63F32eZI7XI0Mhp0hSicQCjL8jP9u+UvxuvA8o+RFET5ZYsrQTOmA95p1VaBnlkbBF0/CXi6AViTiqI2QPrEBiRundRRwOAz3EKzTGKVFcjIDDUrnFf7UsIzMxHNP40x9No/OpqxQklBduc1N1Nu0iFmNzGqEfZxp+DjmgQ1NSbbN8ArCroLSsesOIwCml4ADFw8ATW5ffqX5vG1jeFlR0NivtQ4N4c+kEiOs+/81CtgPD4k4m58SCwX64Nm+QaECRn0wgVIqHPeygvkFqXveIVIKlJJxAYI9e3J1JxurybkDBNUF4iBX9gb+N+1/Q4rIMLTNYk+y4z1+tIeUvkfP9Bl2IfxgEDfDK7iF+qgJIAJweZFaf6OhweXUn9fNbbsAFMEH7pMJrChxZgZL/QkCelX3hT5vVyQ114WLoeDicIwd7/CfQKUhFQahYX3tS7D1NVwMb9byDaf+9gKx6z1h1LRm0KW0OrGwIZuJGYV4GmjmJNSB0ywk3Y6kHwL2ZZlPJAIZg+R8wXXN965I2qsp5rNja+Ri8uWo+aiXXtITAZFk=
+

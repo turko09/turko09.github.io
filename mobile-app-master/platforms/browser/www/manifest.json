@@ -1,0 +1,10 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Alpha Ride",
+  "short_name": "Alpha Ride",
+  "version": "team.alpha.Mobile",
+  "description": "Team ALPHA Mobile Application \n        University of the Philippines Open University\n        CMSC 207 Web Programming and Development",
+  "icons": [],
+  "start_url": "index.html"
+}

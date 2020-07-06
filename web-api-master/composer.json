@@ -1,0 +1,23 @@
+{
+    "name": "cmsc-207-team-alpha/web-api",
+    "description": "CMSC 207 - Team Alpha's Web API",
+    "type": "project",
+    "authors": [{
+            "name": "Sardez, Angelito Jr."
+        },
+        {
+            "name": "Pimentel, Edison"
+        },
+        {
+            "name": "Flores, Karlo"
+        },
+        {
+            "name": "Rotoni, Jeremy"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^4.0",
+        "components/jquery": "^3.3",
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
