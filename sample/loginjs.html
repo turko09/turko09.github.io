@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>Sample Login - JavaScript</title>
+  <script src="../vendor/components/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    var login = function () {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      $.ajax({
+        type: "POST",
+        url: "../api/admin/authenticate.php",
+        data: JSON.stringify({
+          email: email,
+          password: password
+        }),
+        success: function (response) {
+          alert("Successful Response! Message:" + response["message"] + ". ID: " + response["id"]);
+        },
+        error: function (response) {
+          console.log(response);
+          alert("Error Response! Message: " + response.responseJSON["message"]);
+        },
+        contentType: "application/json; charset=UTF-8",
+        dataType: "json"
+      });
+    };
+  </script>
+</head>
+
+<body>
+
+
+
+  Email (try "johndoe@email.com"):
+  <input id="email" name="email" />
+  <br/> Password (try "meh"):
+  <input id="password" name="password" type="password" />
+  <br/>
+  <input type="submit" value="Login" onclick="login()">
+
+</body>
+
+</html>
